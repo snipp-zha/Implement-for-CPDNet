@@ -1,5 +1,5 @@
 # Implement-for-CPDNet
-This work is conducted on Windows
+This is source code for CPDNet
 ## Installation
 
 requirements:
@@ -11,3 +11,8 @@ requirements:
 Install other requirements by:
 ```
 pip install -r requirements.txt
+```
+Conducet the operation of Crop-Paste by:
+```
+python Example of crop-paste  #for LA training
+```
