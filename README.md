@@ -27,4 +27,5 @@ To test a model：
 python evaluation for semi.py  #for semi-supervised testing
 python evaluation for diffusion.py  #for diffusion testing
 ```
-Magnetic Tile data could be got at [Magnetic Tile](https://aistudio.baidu.com/aistudio/datasetdetail/226820)
+All datasets in the paper are open-source.
+
