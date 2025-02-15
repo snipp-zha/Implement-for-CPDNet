@@ -31,7 +31,7 @@ def main():
 
     logger.log("creating model and diffusion...")
     model, diffusion = create_model_and_diffusion(
-        **args_to_dict(args, model_and_diffusion_defaults().keys()) # script_util 74行, unet 393行
+        **args_to_dict(args, model_and_diffusion_defaults().keys()) # script_util 74, unet 393
     )
     model.to(dist_util.dev())
     schedule_sampler = create_named_schedule_sampler(args.schedule_sampler, diffusion, maxt=1000) # uniform
@@ -45,7 +45,7 @@ def main():
     trainset = Defect(base_dir=train_Hist,
                        split='train',
                        transform =ToTensor())
-    labeled_idxs = list(range(args.labelnum)) # [0,1,...,11] # 需要根据数据集大小调整，有标签占总数据的比例
+    labeled_idxs = list(range(args.labelnum)) # [0,1,...,11] # the ratio of labeled data
     unlabeled_idxs = list(range(args.labelnum, args.max_samples)) # [12,9,...,92]
     batch_sampler = TwoStreamBatchSampler(labeled_idxs, unlabeled_idxs, args.batch_size, args.batch_size-args.labeled_bs) #12 12-6
 
