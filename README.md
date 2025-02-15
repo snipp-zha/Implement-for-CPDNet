@@ -1,5 +1,5 @@
 # Implement-for-CPDNet
-This is source code for CPDNet
+This is the source code for CPDNet
 ## Installation
 
 requirements:
