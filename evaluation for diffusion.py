@@ -1,8 +1,5 @@
 #%%
-"""
-Generate a large batch of image samples from a model and save them as a large
-numpy array. This can be used to produce samples for FID evaluation.
-"""
+
 import matplotlib.pyplot as plt
 from skimage.measure import label
 import torch.nn.functional as F
