@@ -28,14 +28,14 @@ python evaluation for semi.py  #for semi-supervised testing
 python evaluation for diffusion.py  #for diffusion testing
 ```
 All datasets in the paper are open-source.
-```
+
 In folder frequency_guided_diffusion, there are the py files which are needed for the training and testing for frequency_diffusion model.
-```
+
 
 In folder networks, there are some comparison methods.
-```
+
 
 In folder dataloaders, there is the py file for image preprocessing.
-```
+
 
 
