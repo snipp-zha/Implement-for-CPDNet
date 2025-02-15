@@ -213,8 +213,8 @@ def main():
     miou_val_all = 0
 
     for step, (b, label)in enumerate(val_datal):
-        c = th.randn_like(b[:, :1, ...]) #噪声是单通道的
-        img = th.cat((b, c), dim=1)     #add a noise channel$ 5通道 从script_util166行可以知道
+        c = th.randn_like(b[:, :1, ...]) #
+        img = th.cat((b, c), dim=1)     #
 
         logger.log("sampling...")
 
@@ -224,15 +224,15 @@ def main():
         image_void = torch.zeros_like(c)[0,0]
         tem = torch.zeros_like(c)
         image_void = image_void.cpu().numpy()
-        for i in range(args.num_ensemble):  #this is for the generation of an ensemble of 5 masks.生成5张独立的预测结果
+        for i in range(args.num_ensemble):  #this is for the generation of an ensemble of 5 masks.
             model_kwargs = {}
             start.record()
             sample_fn = (
-                diffusion.p_sample_loop_known if not args.use_ddim else diffusion.ddim_sample_loop_known #前者 guass_diffusion 490行
+                diffusion.p_sample_loop_known if not args.use_ddim else diffusion.ddim_sample_loop_known #
             )
             sample, x_noisy, org = sample_fn(
                 model,
-                (args.batch_size, 1, args.image_size, args.image_size), img,  # 3通道有问题
+                (args.batch_size, 1, args.image_size, args.image_size), img,  # 
                 clip_denoised=args.clip_denoised,
                 model_kwargs=model_kwargs,
             ) # 490行
